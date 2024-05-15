@@ -141,7 +141,7 @@ img {
 #banner .banner-con {
   position: relative;
   display: flex;
-  padding: 265px 0 115px;
+  padding: 200px 0 115px;
 }
 
 #banner h1 {
@@ -176,8 +176,107 @@ img {
   width: 100%;
   margin-bottom: 50px;
 }
-
 /* Banner Section */
+
+/* About Philippines */
+#about-philippines .wrapper {
+  max-width: 1440px;
+}
+
+#about-philippines .about-philippines-con {
+  padding: 115px 0;
+}
+
+#about-philippines .about-philippines-content-img::after {
+  position: absolute;
+  content: "";
+  bottom: -115px; 
+  height: 288px;
+  width: 100%;
+  background: linear-gradient(180.22deg, rgba(30, 64, 114, 0) 0.19%, var(--global-color-blue) 99.81%);
+}
+
+#about-philippines h2 span {
+  color: var(--global-color-yellow);
+}
+
+#about-philippines h3 span {
+  color: var(--global-color-yellow);
+}
+
+#about-philippines .about-philippines-content {
+  display: flex;
+  padding-top: 50px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 55px;
+}
+
+#about-philippines .about-philippines-content-img{
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+}
+
+#about-philippines .about-philippines-content-img img{
+  width: 426px;
+  height: 338px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+}
+
+#about-philippines .about-philippines-content-img img:nth-child(2){
+  position: absolute;
+  top: 228px;
+  left: 294px;
+  z-index: 1;
+}
+
+#about-philippines .about-philippines-content-img img:last-child{
+  margin-top: 117px;
+}
+
+#about-philippines p {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 30px ;
+}
+/* About Philippines */
+
+/* Visual Tour */
+#visual-tour .wrapper {
+  max-width: 1440px;
+}
+
+#visual-tour .visual-tour-con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 115px 0;
+  gap: 55px;
+}
+
+#visual-tour .visual-tour-con h2 span {
+  color: var(--global-color-yellow);
+}
+
+#visual-tour h2 {
+  width: 100%;
+  max-width: 666px;
+}
+
+#visual-tour p {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 30px ;
+}
+
+#visual-tour video {
+  width: 100%;
+  max-width: 589px;
+  height: 610px;
+}
+/* Visual Tour */
 
 /* Tourist Spot Section */
 #tourist-spot .wrapper {
@@ -226,6 +325,85 @@ img {
   gap: 50px;
   flex-direction: column;
 }
+
+/* Our Team */
+#team .wrapper {
+  max-width: 1440px;
+}
+
+#team .our-team {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 115px 0;
+  gap: 75px;
+}
+
+#team .team-con h2{
+  margin-bottom: 50px;
+}
+
+#team .team-con span {
+  color: var(--global-color-yellow);
+}
+
+#team .team-con .our-team-widget span::after {
+  content: " |";
+  color: #ffffff;
+}
+
+#team .our-team-widget img {
+  object-fit: cover;
+  width: 430px;
+  height: 500px;
+  border-radius: 10px;
+}
+
+#team .our-team-widget img {
+  width: 430px; 
+  height: 499px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+}
+
+#team .our-team-widget {
+  position: relative;
+}
+
+#team .our-team-widget .widget-details {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  z-index: 2;
+}
+
+#team .our-team-widget::after {
+  position: absolute;
+  content: ""; 
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(30, 64, 114, 0) 50%, #1E4072 100%); 
+  border-radius: 10px;
+}
+
+#team .our-team-widget p span {
+  color: var(--global-color-yellow);
+}
+
+#team .our-team-widget p {
+  font-size: 14px;
+  font-weight: 300;
+  padding-top: 15px;
+  line-height: 1em;
+}
+
+
+/* Our Team */
+
+
+
+
 /* Tourist Spot Section */
 
 /* .cards-box {
@@ -291,6 +469,8 @@ img {
 
 @media screen and (min-width: 1024px) {
   #header .header-con,
+  #about-philippines .about-philippines-con,
+  #visual-tour .visual-tour-con,
   #banner .banner-con {
     padding-left: 30px;
     padding-right: 30px;
