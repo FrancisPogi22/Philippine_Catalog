@@ -398,6 +398,15 @@ img {
   line-height: 1em;
 }
 
+#team .our-team-widget .social-media {
+  position: absolute;
+  bottom: 120px;
+  right:  10px;
+  z-index: 3;
+}
+
+
+
 
 /* Our Team */
 
