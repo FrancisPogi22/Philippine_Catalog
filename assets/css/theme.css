@@ -33,6 +33,10 @@ h6 {
   color: var(--global-color-white);
 }
 
+h2 span {
+  color: var(--global-color-yellow);
+}
+
 h1 {
   font-size: 80px;
   line-height: 90px;
@@ -134,6 +138,10 @@ img {
 /* Header Section */
 
 /* Banner Section */
+#banner {
+  overflow-x: clip;
+}
+
 #banner .wrapper {
   max-width: 1440px;
 }
@@ -190,14 +198,14 @@ img {
 #about-philippines .about-philippines-content-img::after {
   position: absolute;
   content: "";
-  bottom: -115px; 
+  bottom: -115px;
   height: 288px;
   width: 100%;
-  background: linear-gradient(180.22deg, rgba(30, 64, 114, 0) 0.19%, var(--global-color-blue) 99.81%);
-}
-
-#about-philippines h2 span {
-  color: var(--global-color-yellow);
+  background: linear-gradient(
+    180.22deg,
+    rgba(30, 64, 114, 0) 0.19%,
+    var(--global-color-blue) 99.81%
+  );
 }
 
 #about-philippines h3 span {
@@ -212,34 +220,34 @@ img {
   gap: 55px;
 }
 
-#about-philippines .about-philippines-content-img{
+#about-philippines .about-philippines-content-img {
   position: relative;
   width: 100%;
   max-width: 720px;
 }
 
-#about-philippines .about-philippines-content-img img{
+#about-philippines .about-philippines-content-img img {
   width: 426px;
   height: 338px;
   border-radius: 10px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
 }
 
-#about-philippines .about-philippines-content-img img:nth-child(2){
+#about-philippines .about-philippines-content-img img:nth-child(2) {
   position: absolute;
   top: 228px;
   left: 294px;
   z-index: 1;
 }
 
-#about-philippines .about-philippines-content-img img:last-child{
+#about-philippines .about-philippines-content-img img:last-child {
   margin-top: 117px;
 }
 
 #about-philippines p {
   width: 100%;
   max-width: 600px;
-  margin-top: 30px ;
+  margin-top: 30px;
 }
 /* About Philippines */
 
@@ -256,10 +264,6 @@ img {
   gap: 55px;
 }
 
-#visual-tour .visual-tour-con h2 span {
-  color: var(--global-color-yellow);
-}
-
 #visual-tour h2 {
   width: 100%;
   max-width: 666px;
@@ -268,7 +272,7 @@ img {
 #visual-tour p {
   width: 100%;
   max-width: 600px;
-  margin-top: 30px ;
+  margin-top: 30px;
 }
 
 #visual-tour video {
@@ -289,10 +293,6 @@ img {
 
 #tourist-spot .tourist-spot-con h2 {
   margin-bottom: 50px;
-}
-
-#tourist-spot .tourist-spot-con h2 span {
-  color: var(--global-color-yellow);
 }
 
 #tourist-spot .tourist-widget {
@@ -326,6 +326,242 @@ img {
   flex-direction: column;
 }
 
+/* Gallery Section */
+#gallery {
+  overflow-x: clip;
+}
+
+#gallery .wrapper {
+  max-width: 1440px;
+}
+
+#gallery .gallery-con {
+  padding: 115px 0;
+}
+
+#gallery .gallery-header-con {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+#gallery .gallery-navbar {
+  display: flex;
+  padding: 19.5px 0;
+  position: relative;
+  border-bottom: 3px solid var(--global-color-white);
+}
+
+#gallery .gallery-navbar a.active {
+  color: var(--global-color-yellow);
+}
+
+#gallery .image-con {
+  position: relative;
+}
+
+#gallery .image-con h4 {
+  position: absolute;
+  z-index: 2;
+  color: var(--global-color-blue);
+}
+
+#gallery .a .image-con h4 {
+  bottom: 55px;
+  left: 20px;
+}
+
+#gallery .b .image-con h4,
+#gallery .c .image-con h4 {
+  bottom: 55px;
+  left: -42px;
+}
+
+#gallery .f .image-con h4 {
+  bottom: 282px;
+  left: -42px;
+}
+
+#gallery .d .image-con h4 {
+  left: 20px;
+  bottom: 75px;
+}
+
+#gallery .e .image-con h4 {
+  left: 20px;
+  bottom: 105px;
+}
+
+/* #gallery .gallery-navbar a.active::before {
+  position: absolute;
+  content: "";
+  height: 2.8px;
+  width: 74px;
+  border-radius: 2px;
+  bottom: -22px;
+  background: var(--global-color-yellow);
+} */
+
+#gallery .gallery-navbar a {
+  font-family: "Montserrat", sans-serif;
+  color: var(--global-color-white);
+  align-items: center;
+  height: 100%;
+  display: flex;
+}
+
+#gallery .gallery-navbar li:first-child {
+  padding-left: 50px;
+}
+
+#gallery .gallery-navbar li:last-child {
+  padding-right: 50px;
+}
+
+#gallery .gallery-navbar li:not(:last-child) a:after {
+  position: relative;
+  content: "";
+  background: var(--global-color-white);
+  height: 22px;
+  border-radius: 2px;
+  width: 2px;
+  margin: 0px 50px;
+  display: inline-grid;
+}
+
+#gallery .gallery-navbar li {
+  position: relative;
+}
+
+.gallery-grid-con {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 30px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "a b c"
+    "d e f";
+}
+
+.gallery-grid-con img {
+  border-radius: 10px;
+}
+
+.a {
+  grid-area: a;
+}
+
+.a img {
+  width: 396px;
+  height: 374px;
+  margin-top: 78px;
+}
+
+.b {
+  grid-area: b;
+}
+
+.b img {
+  right: 62px;
+  position: relative;
+  width: 492px;
+  height: 422px;
+}
+
+.c {
+  grid-area: c;
+}
+
+.c img {
+  right: 62px;
+  position: relative;
+  margin-top: 40px;
+  width: 492px;
+  height: 212px;
+}
+
+.d {
+  grid-area: d;
+}
+
+.d img {
+  width: 458px;
+  height: 306px;
+  position: relative;
+  top: -25px;
+}
+
+.e {
+  grid-area: e;
+}
+
+.e img {
+  right: 62px;
+  position: relative;
+  margin-left: auto;
+  top: -55px;
+  width: 430px;
+  height: 428px;
+}
+
+.f {
+  grid-area: f;
+}
+
+.f img {
+  position: relative;
+  top: -225px;
+  width: 492px;
+  right: 62px;
+  height: 477px;
+}
+
+/* Gallery Section */
+
+/* Faqs Section */
+#faqs .wrapper {
+  max-width: 1440px;
+}
+
+#faqs .faqs-con {
+  padding: 115px 0;
+}
+
+#faqs .faqs-con h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#faqs .faqs-list-con {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+}
+
+#faqs .faqs-widget .faqs-header {
+  padding: 25px 45px 25px 105px;
+  border-radius: 10px;
+  background: #2a599f;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#faqs .faqs-widget .faqs-header p {
+  font-weight: 600;
+  opacity: 0.75;
+}
+
+#faqs .faqs-details {
+  display: none;
+  padding: 65px 100px;
+}
+
+/* Faqs Section */
+
 /* Our Team */
 #team .wrapper {
   max-width: 1440px;
@@ -338,7 +574,7 @@ img {
   gap: 75px;
 }
 
-#team .team-con h2{
+#team .team-con h2 {
   margin-bottom: 50px;
 }
 
@@ -346,26 +582,41 @@ img {
   color: var(--global-color-yellow);
 }
 
+#team .social-links {
+  position: absolute;
+  display: flex;
+  opacity: 0;
+  flex-direction: column;
+  gap: 10px;
+  transition: 0.2s;
+  z-index: 1;
+  right: 10px;
+  bottom: 65px;
+}
+
+#team .our-team-widget::after:hover ~ .social-links {
+  opacity: 1;
+}
+
 #team .team-con .our-team-widget span::after {
   content: " |";
   color: #ffffff;
 }
 
-#team .our-team-widget img {
+#team .our-team-widget .team-image img {
   object-fit: cover;
-  width: 430px;
   height: 500px;
   border-radius: 10px;
-}
-
-#team .our-team-widget img {
-  width: 430px; 
-  height: 499px;
-  border-radius: 10px;
+  width: 430px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
 }
 
+#team .social-links a img {
+  width: 100%;
+}
+
 #team .our-team-widget {
+  cursor: pointer;
   position: relative;
 }
 
@@ -376,14 +627,14 @@ img {
   z-index: 2;
 }
 
-#team .our-team-widget::after {
+#team .team-image::after {
   position: absolute;
-  content: ""; 
+  content: "";
   top: 0;
   bottom: 0;
   height: 100%;
   width: 100%;
-  background: linear-gradient(180deg, rgba(30, 64, 114, 0) 50%, #1E4072 100%); 
+  background: linear-gradient(180deg, rgba(30, 64, 114, 0) 50%, #1e4072 100%);
   border-radius: 10px;
 }
 
@@ -398,11 +649,7 @@ img {
   line-height: 1em;
 }
 
-
 /* Our Team */
-
-
-
 
 /* Tourist Spot Section */
 
