@@ -10,6 +10,23 @@ $(document).ready(() => {
     }
   }
 
+
+  $('.card-text').click(function() {
+    $('.card-text').not($(this)).removeClass('active');
+    $(this).toggleClass('active');
+    $(this).find('p').slideToggle();
+    $('.card-text').not($(this)).find('p').slideUp();
+    let videoId = $(this).data('name');
+
+    $('video').each(function() {
+        if (!$(this).is('#' + videoId)) {
+            this.pause();
+        }
+    });
+
+    $('#' + videoId)[0].play();
+  });
+
   const swiper = new Swiper(".swiper", {
     direction: "horizontal",
     loop: true,
