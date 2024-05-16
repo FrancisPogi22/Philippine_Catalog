@@ -160,14 +160,14 @@ img {
 
 #banner .banner-img-con {
   position: absolute;
-  left: 689px;
-  top: 31px;
+  left: 700px;
+  top: 30px;
 }
 
 #banner .banner-img-con img {
   position: relative;
-  width: 991px;
-  height: 1034px;
+  width: 800px;
+  height: 900px;
 }
 
 #banner h1 span {
