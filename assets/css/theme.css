@@ -7,6 +7,7 @@
   outline: none !important;
   text-decoration: none !important;
   list-style: none !important;
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -18,7 +19,6 @@
 }
 
 body {
-  scroll-behavior: smooth;
   background: var(--global-color-blue);
 }
 
@@ -53,7 +53,7 @@ h2 {
 
 h3 {
   font-size: 40px;
-  line-height: 1.5em;
+  line-height: 1em;
 }
 
 h4 {
@@ -107,6 +107,13 @@ img {
   left: 0;
   width: 100%;
   z-index: 9;
+  transition: 0.2s;
+}
+
+#header.scrolled {
+  background: var(--global-color-blue);
+  filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03))
+    drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
 }
 
 #header .wrapper {
@@ -153,7 +160,7 @@ img {
 #banner .banner-con {
   position: relative;
   display: flex;
-  padding: 200px 0 115px;
+  padding: 250px 0 115px;
 }
 
 #banner h1 {
@@ -164,8 +171,21 @@ img {
 
 #banner .banner-img-con {
   position: absolute;
-  left: 700px;
-  top: 30px;
+  left: 750px;
+  top: 55px;
+}
+
+#banner .banner-img-con::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(
+    180.22deg,
+    rgba(30, 64, 114, 0) 0.19%,
+    #1e4072 99.81%
+  );
+  bottom: 0;
 }
 
 #banner .banner-img-con img {
@@ -197,6 +217,7 @@ img {
 
 #about-philippines .about-philippines-con {
   padding: 115px 0;
+  position: relative;
 }
 
 #about-philippines .about-philippines-content-description {
@@ -243,6 +264,18 @@ img {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
 }
 
+#about-philippines .planting {
+  position: absolute;
+  top: -40px;
+  left: 1220px;
+}
+
+#about-philippines .jeep {
+  position: absolute;
+  bottom: -80px;
+  left: 1250px;
+}
+
 #about-philippines .about-philippines-content-img img:nth-child(2) {
   position: absolute;
   top: 228px;
@@ -267,6 +300,7 @@ img {
 }
 
 #visual-tour .visual-tour-con {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -277,6 +311,12 @@ img {
 #visual-tour h2 {
   width: 100%;
   max-width: 666px;
+}
+
+#visual-tour .farmer {
+  position: absolute;
+  bottom: -170px;
+  left: -290px;
 }
 
 #visual-tour p {
@@ -340,11 +380,18 @@ img {
   overflow-x: clip;
 }
 
+#gallery .monkey {
+  position: absolute;
+  left: 1270px;
+  bottom: -140px;
+}
+
 #gallery .wrapper {
   max-width: 1440px;
 }
 
 #gallery .gallery-con {
+  position: relative;
   padding: 115px 0;
 }
 
@@ -447,11 +494,18 @@ img {
   position: relative;
 }
 
-.gallery-grid-con {
+.gallery-grid-con.active {
   display: grid;
+  opacity: 1;
+}
+
+.gallery-grid-con {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 30px;
+  display: none;
+  transition: 0.2s;
+  opacity: 0;
   grid-auto-flow: row;
   grid-template-areas:
     "a b c"
@@ -459,6 +513,7 @@ img {
 }
 
 .gallery-grid-con img {
+  object-fit: cover;
   border-radius: 10px;
 }
 
@@ -538,7 +593,14 @@ img {
   max-width: 1440px;
 }
 
+#faqs .bird {
+  position: absolute;
+  top: -360px;
+  left: 870px;
+}
+
 #faqs .faqs-con {
+  position: relative;
   padding: 115px 0;
 }
 
@@ -569,6 +631,10 @@ img {
 }
 
 #faqs .faqs-details {
+  background: #2b4a77;
+  margin-top: 10px;
+
+  border-radius: 10px;
   display: none;
   padding: 65px 100px;
 }
@@ -664,6 +730,114 @@ img {
   padding-top: 15px;
   line-height: 1em;
 }
+
+/* Contact Section */
+#contact {
+  position: relative;
+}
+
+#contact .wrapper {
+  max-width: 1440px;
+}
+
+#contact .contact-con {
+  padding: 115px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+#contact::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/Map.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.08;
+  z-index: -1;
+}
+
+#contact .contact-details h2 {
+  margin-bottom: 50px;
+}
+
+#contact .contact-links-con {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  width: 285px;
+  gap: 50px;
+}
+
+#contact .contact-details {
+  width: 610px;
+}
+
+#contact .links-con {
+  display: flex;
+  align-items: center;
+}
+
+#contact .links-con p {
+  margin-left: 20px;
+}
+
+#contact .contact-form {
+  background: #244b84;
+  padding: 82px 50px;
+  width: 650px;
+  border-radius: 10px;
+  margin-right: 45px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+}
+
+#contact .contact-form input,
+#contact .contact-form textarea {
+  border-radius: 10px;
+  padding: 23px 27px;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  opacity: 0.5;
+}
+
+#contact .contact-form label {
+  font-family: "Poppins", sans-serif;
+  color: var(--global-color-white);
+  font-size: 20px;
+  line-height: 1.2em;
+  margin-bottom: 20px;
+}
+
+#contact .contact-form .field-con {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+
+#contact .double-field-con input {
+  width: 250px;
+  font: 20px;
+}
+
+#contact .double-field-con {
+  display: flex;
+  gap: 50px;
+}
+
+#contact .contact-form button {
+  margin-top: 50px;
+  cursor: pointer;
+}
+
+#contact .contact-form input::placeholder,
+#contact .contact-form textarea::placeholder {
+  color: rgba(30, 64, 114, 0.65);
+  font-family: "Poppins", sans-serif;
+}
+/* Contact Section */
 
 @media screen and (max-width: 767px) {
   p {
