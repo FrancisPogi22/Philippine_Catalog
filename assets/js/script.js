@@ -30,19 +30,6 @@ $(document).ready(() => {
     $("#" + videoId)[0].play();
   });
 
-  const swiper = new Swiper(".swiper", {
-    direction: "horizontal",
-    loop: true,
-    slidesPerView: 3,
-    pagination: {
-      el: ".swiper-pagination",
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
-
   $(".faqs-header").click(function () {
     $(".faqs-details")
       .not(
@@ -55,6 +42,8 @@ $(document).ready(() => {
       .slideUp(function () {
         $(this).removeClass("active");
       });
+
+      $(this).closest('.faqs-widget').addClass('active');
   });
 
   window.onload = () => {
@@ -121,34 +110,11 @@ $(document).ready(() => {
     e.preventDefault();
     let widget = $(this).data("id");
 
+    $(".gallery-navbar li").removeClass("active");
+    $(this).closest("li").addClass("active");
+
     $(".gallery-grid-con").removeClass("active");
 
     $("#" + widget + "").addClass("active");
   });
-
-  //   window.onload = () => {
-  //     let sliderImagesBox = document.querySelectorAll(".cards-box");
-
-  //     sliderImagesBox.forEach((el) => {
-  //       let imageNodes = el.querySelectorAll(".card:not(.hide)");
-  //       let arrIndexes = [];
-  //       (() => {
-  //         let start = 0;
-  //         while (imageNodes.length > start) {
-  //           arrIndexes.push(start++);
-  //         }
-  //       })();
-
-  //       let setIndex = (arr) => {
-  //         for (let i = 0; i < imageNodes.length; i++) {
-  //           imageNodes[i].dataset.slide = arr[i];
-  //         }
-  //       };
-  //       el.addEventListener("click", () => {
-  //         arrIndexes.unshift(arrIndexes.pop());
-  //         setIndex(arrIndexes);
-  //       });
-  //       setIndex(arrIndexes);
-  //     });
-  //   };
 });

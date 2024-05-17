@@ -8,6 +8,7 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="../assets/css/about.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <title>About Us</title>
   </head>
   <body>
@@ -19,7 +20,7 @@
           /></a>
           <ul class="navbar">
             <li>
-              <a href="homepage.html">Home</a>
+              <a href="homepage">Home</a>
             </li>
             <li>
               <a href="about.html">About Us</a>
@@ -38,11 +39,20 @@
     <section id="about-us">
       <div class="wrapper">
         <div class="about-us-con">
-          <h1>ABOUT <span>FUNPINAS</span></h1>
+          <h1 data-aos="fade-right">ABOUT <span>FUNPINAS</span></h1>
           <div class="about-us-container">
-            <img src="../assets/img/About us.png" alt="" />
+            <img
+              src="../assets/img/About us.png"
+              alt="Image"
+              data-aos="fade-right"
+              data-aos-duration="500"
+            />
             <div class="about-us-description">
-              <div class="about-us-content">
+              <div
+                class="about-us-content"
+                data-aos="fade-up"
+                data-aos-duration="500"
+              >
                 <h3>Our <span>Story</span>:</h3>
                 <p>
                   At FunPinas, we are driven by a passion for showcasing the
@@ -62,7 +72,11 @@
                   connections with everyone.
                 </p>
               </div>
-              <div class="about-us-content">
+              <div
+                class="about-us-content"
+                data-aos="fade-up"
+                data-aos-duration="500"
+              >
                 <h3>Our <span>Mission</span>:</h3>
                 <p>
                   At FunPinas, our mission is simple, it is to shine a spotlight
@@ -80,7 +94,7 @@
         </div>
       </div>
     </section>
-    <section id="footer">
+    <section id="footer" data-aos="fade-up" data-aos-duration="500">
       <div class="wrapper">
         <div class="footer-container">
           <div class="footer-con">
@@ -110,7 +124,7 @@
                       fill="#1E4072"
                     /></svg
                 ></a>
-  
+
                 <a href="#"
                   ><svg
                     width="46"
@@ -125,7 +139,7 @@
                       fill="#1E4072"
                     /></svg
                 ></a>
-  
+
                 <a href="#"
                   ><svg
                     width="46"
@@ -163,7 +177,7 @@
                       />
                     </defs></svg
                 ></a>
-  
+
                 <a href="#"
                   ><svg
                     width="46"
@@ -233,12 +247,20 @@
                 </ul>
               </div>
             </div>
-          </div> 
+          </div>
           <div class="copy-right">
             <p>Copyright © 2024 Fun Pinas</p>
-          </div>        
-        </div>  
+          </div>
+        </div>
       </div>
     </section>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../assets/js/script.js"></script>
   </body>
 </html>
