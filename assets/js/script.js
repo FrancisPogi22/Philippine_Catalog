@@ -8,24 +8,26 @@ $(document).ready(() => {
 
   function checkScroll() {
     if ($(window).scrollTop() > 45) {
+      $("#header").addClass("scrolled");
+    } else {
+      $("#header").removeClass("scrolled");
     }
   }
 
+  $(".card-text").click(function () {
+    $(".card-text").not($(this)).removeClass("active");
+    $(this).toggleClass("active");
+    $(this).find("p").slideToggle();
+    $(".card-text").not($(this)).find("p").slideUp();
 
-  $('.card-text').click(function() {
-    $('.card-text').not($(this)).removeClass('active');
-    $(this).toggleClass('active');
-    $(this).find('p').slideToggle();
-    $('.card-text').not($(this)).find('p').slideUp();
-    let videoId = $(this).data('name');
+    let videoId = $(this).data("name");
 
-    $('video').each(function() {
-        if (!$(this).is('#' + videoId)) {
-            this.pause();
-        }
+    $("video").each(function () {
+      if (!$(this).is("#" + videoId)) {
+        this.pause();
+      }
     });
-
-    $('#' + videoId)[0].play();
+    $("#" + videoId)[0].play();
   });
 
   const swiper = new Swiper(".swiper", {
@@ -39,6 +41,20 @@ $(document).ready(() => {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
+  });
+
+  $(".faqs-header").click(function () {
+    $(".faqs-details")
+      .not(
+        $(this)
+          .closest(".faqs-widget")
+          .find(".faqs-details")
+          .toggleClass("active")
+          .slideToggle()
+      )
+      .slideUp(function () {
+        $(this).removeClass("active");
+      });
   });
 
   window.onload = () => {
@@ -77,6 +93,38 @@ $(document).ready(() => {
       setIndex(0);
     });
   };
+
+  $(document).on("click", "#submitBtn", (e) => {
+    e.preventDefault();
+
+    if ($("#concernForm").valid()) {
+      let formData = $("#concernForm").serialize();
+
+      $.ajax({
+        type: "POST",
+        url: "submitConcern",
+        data: formData,
+        success() {
+          Swal.fire({
+            icon: "success",
+            title: "Your Concern Has Been Submitted!",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+          $("#concernForm")[0].reset();
+        },
+      });
+    }
+  });
+
+  $(".gallery-navbar li a").click(function (e) {
+    e.preventDefault();
+    let widget = $(this).data("id");
+
+    $(".gallery-grid-con").removeClass("active");
+
+    $("#" + widget + "").addClass("active");
+  });
 
   //   window.onload = () => {
   //     let sliderImagesBox = document.querySelectorAll(".cards-box");
