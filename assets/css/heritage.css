@@ -111,6 +111,12 @@ img {
   z-index: 9;
 }
 
+#header.scrolled {
+  background: var(--global-color-blue);
+  filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03))
+    drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
+}
+
 #header .wrapper {
   max-width: 1640px;
 }
@@ -188,7 +194,58 @@ img {
   padding-top: 30px;
 }
 
-/* Heritage Spot */
+/* /* Hero Spot */
+
+#hero-spot {
+  position: relative;
+  display: flex;
+  padding: 200px 0 115px;
+}
+
+#hero-spot .wrapper {
+  max-width: 1440px;
+}
+
+#hero-spot .hero-spot-con h2 {
+  margin-bottom: 55px;
+}
+
+#hero-spot .hero-spot-widget img {
+  width: 100%;
+  max-width: 378.25px;
+  height: 494px;
+}
+
+#hero-spot .hero-spot-widget {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 95px;
+}
+
+#hero-spot .heriherotage-spot-widget:not(:last-child) {
+  padding-bottom: 50px;
+}
+
+#hero-spot .hero-spot-widget:nth-of-type(2),
+#hero-spot .hero-spot-widget:nth-of-type(4),
+#hero-spot .hero-spot-widget:nth-of-type(6) {
+  flex-direction: row-reverse;
+}
+
+#hero-spot .img-description  {
+  background: #2A599F;
+  padding: 50px;
+  border-radius: 15px;
+}
+
+#hero-spot .img-description p {
+  width: 100%;
+  max-width: 820px;
+  padding-top: 30px;
+}
+
+/* Hero Spot */
 
 /* Festival Section */
 
