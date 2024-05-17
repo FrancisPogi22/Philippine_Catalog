@@ -30,7 +30,7 @@ include '../Backend/connect.php';
             <a href="about">About Us</a>
           </li>
           <li>
-            <a href="heritage">Heritage</a>
+            <a href="heritage.html">Heritage</a>
           </li>
           <li>
             <a href="#">Contact</a>
