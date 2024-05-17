@@ -361,10 +361,6 @@ img {
     padding-bottom: 40px;
   }
 
-  #header .navbar {
-    display: none;
-  }
-
   #heritage-spot .heritage-spot-widget {
     display: grid;
   }
@@ -401,9 +397,6 @@ img {
     padding-bottom: 40px;
   }
 
-  #header .navbar {
-    display: none;
-  }
 
   #heritage-spot .heritage-spot-widget {
     display: grid;
@@ -423,10 +416,6 @@ img {
 
   #heritage-spot .heritage-spot-widget:not(:last-child) {
     padding-bottom: 40px;
-  }
-
-  #header .navbar {
-    display: none;
   }
 
   #heritage-spot .heritage-spot-widget {
