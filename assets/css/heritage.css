@@ -190,7 +190,7 @@ img {
 
 /* Heritage Spot */
 
-/* Tourist Spot Section */
+/* Festival Section */
 
 #festival-cards .wrapper {
   max-width: 1440px;
@@ -257,7 +257,7 @@ img {
 }
 
 #festival-cards .card-text.active h4 {
-  font-size: 60px;
+  font-size: 40px;
   font-weight: 800;
   opacity: 1;
 }
@@ -310,8 +310,9 @@ img {
   top: 0;
   width: 10px;
   height: 100%;
-  background: linear-gradient(270deg, rgba(0, 0, 0, 0.3), transparent);
-  border-radius: 10px;
+  background: linear-gradient(270deg, var(--global-color-blue), transparent);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 #festival-cards .content-placeholder video {
@@ -321,6 +322,93 @@ img {
   object-fit: cover;
   border-radius: 10px;
 }
+
+
+/* Festival Section */
+
+#festival-cards .content-placeholder video {
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Footer */
+
+#footer .wrapper {
+  max-width: 1440px;
+}
+
+#footer .footer-container {
+  padding-top: 110px;
+}
+
+#footer .footer-con {
+  display: flex;
+  gap: 185px;
+  margin-bottom: 30px;
+}
+
+#footer .footer-container .footer-widget {
+  display: grid;
+  gap: 30px;
+  width: 100%;
+  max-width: 396px;
+}
+
+#footer .footer-con .footer-widget img {
+  width: 100%;
+  max-width: 169px;
+  height: 129.51px;
+}
+
+#footer .footer-con .footer-icons {
+  display: flex;
+  gap: 30px;
+}
+
+#footer .footer-con .footer-info {
+  display: flex;
+  gap: 185px;
+}
+
+#footer .footer-con .footer-info p {
+  color: var(--global-color-yellow);
+  margin-bottom: 15px;
+}
+
+#footer .footer-con .footer-info ul li a {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  line-height: 2em;
+  color: var(--global-color-white);
+}
+
+#footer .footer-con .footer-info .navbar {
+  display: grid;
+  gap: 15px;
+  text-align: center;
+}
+
+#footer .copy-right {
+  padding: 30px 0;
+  text-align: center;
+  border-top: 1px solid var(--global-color-white);
+  opacity: .50;
+}
+
+#footer .copy-right p {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  line-height: 2em;
+  color: var(--global-color-white);
+}
+
+
+/* Footer */
 
 @media screen and (max-width: 767px) {
   h2 {
