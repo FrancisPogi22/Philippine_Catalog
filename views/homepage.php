@@ -26,7 +26,7 @@ include '../Backend/connect.php';
             <a href="homepage">Home</a>
           </li>
           <li>
-            <a href="about">About Us</a>
+            <a href="about.html">About Us</a>
           </li>
           <li>
             <a href="heritage.html">Heritage</a>
