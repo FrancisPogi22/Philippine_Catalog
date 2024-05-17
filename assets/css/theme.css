@@ -464,6 +464,7 @@ img {
 } */
 
 #gallery .gallery-navbar a {
+  transition: 0.2s;
   font-family: "Montserrat", sans-serif;
   color: var(--global-color-white);
   align-items: center;
@@ -510,6 +511,10 @@ img {
   grid-template-areas:
     "a b c"
     "d e f";
+}
+
+#gallery .gallery-navbar li.active a {
+  color: var(--global-color-yellow);
 }
 
 .gallery-grid-con img {
@@ -836,6 +841,20 @@ img {
 #contact .contact-form textarea::placeholder {
   color: rgba(30, 64, 114, 0.65);
   font-family: "Poppins", sans-serif;
+}
+
+#contact::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: linear-gradient(
+    360deg,
+    rgba(30, 64, 114, 0) 0.19%,
+    var(--global-color-blue) 99.81%
+  );
 }
 /* Contact Section */
 
